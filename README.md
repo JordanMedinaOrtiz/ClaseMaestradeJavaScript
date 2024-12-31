@@ -53,4 +53,3 @@
    ```
     
 <p>Este repositorio refleja mi aprendizaje y crecimiento en JavaScript, consolidando conceptos clave y enfrentando retos prácticos. A medida que avance en el curso, seguiré subiendo más actividades y mejorando mis habilidades de desarrollo.</p>
-<p>Puedes explorar el repositorio en detalle <a href="https://github.com/jordanmedinaortiz/ClaseMaestraJavaScript" target="_blank">aquí</a>.</p>
