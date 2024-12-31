@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manipulación del DOM</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    header {
+      background-color: darkslategray;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+    main {
+      flex: 1;
+      background-color: lightskyblue;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #container {
+      background-color: springgreen;
+      border: black 2px solid;
+      width: 300px;
+      height: 300px;
+      margin: 2rem;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+    }
+    #button {
+      background-color: darkslategray;
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      background-color: darkslategray;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mi Página de Manipulación del DOM</h1>
+  </header>
+  <main>
+    <div id="container">
+      <h2>¡Haz clic para cambiar el estilo!</h2>
+    </div>
+    <div>
+      <button id="button">Haz clic</button>
+    </div>
+  </main>
+  <footer>
+    &copy; 2024 Mi Página de Manipulación del DOM. Todos los derechos reservados.
+  </footer>
+  <script>
+    const container = document.getElementById('container');
+    const button = document.getElementById('button');
+    const h2 = document.querySelector('h2');
+
+    button.addEventListener('click', () => {
+      const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+      const randomRadius = Math.floor(Math.random() * 50);
+      const randomBorder = Math.floor(Math.random() * 10) + 1;
+
+      container.style.backgroundColor = `#${randomColor}`;
+      container.style.borderRadius = `${randomRadius}%`;
+      container.style.border = `${randomBorder}px solid black`;
+
+      h2.textContent = `Color: #${randomColor}, Radio: ${randomRadius}%, Borde: ${randomBorder}px`;
+    });
+  </script>
+</body>
+</html>
